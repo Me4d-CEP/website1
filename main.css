@@ -1,0 +1,283 @@
+/*clearing all default styles*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/*styling of fonts (TO EDIT)*/
+h1, h2, h3, th {
+  font-family: Tahoma, Geneva, sans-serif;
+}
+
+p, li, td, figcaption, strong, button {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+
+/* general styles (TO EDIT)*/
+body {
+	margin: 20px 20px;
+}
+
+h1 {
+  margin: 20px 0;
+}
+
+h2 {
+  margin: 15px 0;
+}
+
+h3 {
+  margin: 10px 0;
+}
+
+p {
+  font-size: 16.5px;
+  margin: 15px 0;
+  /*color: #bfbfbf*/
+}
+
+hr {
+  border: 1px solid black;
+  margin: 15px 0;
+  border-collapse: collapse;
+}
+
+img{
+  width:380px;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+iframe {
+  width: 60vw;
+  height: 70vh;
+  border: 0;
+}
+
+/* styling for navigation bar */
+.nav-links{
+  list-style: none;
+  padding:0;
+  background:#45A29E;
+}
+
+.nav-links li a{
+  color: white;
+  text-decoration: none;
+  padding: 10px 5px;
+  display: block;
+  line-height: 1;
+}
+
+.nav-links li a:hover{
+  text-decoration: underline;
+}
+
+.nav-links li a:active{
+  text-decoration: none;
+  color: #CDCDCD;
+
+}
+
+.nav-links li {
+  border-bottom: 1px dashed #ddd;
+}
+
+.icon {
+  width: 25vw;
+  display: block;
+  margin: 0 auto 2vh auto;
+  background-color: #999999;
+  padding: 2vw;
+  border-radius: 10px;
+}
+
+/*#9c1919*/
+@media screen and (min-width: 500px){
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    background: #0db5a4;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    background:none;
+  }
+
+  .icon {
+    height: 55px;
+    width: 110px;
+    margin: 3px 10px 6px 3px;
+    padding: 0;
+    background-color: transparent;
+  }
+
+
+  .nav-links li a:hover{
+    text-decoration: none;
+  }
+
+  .nav-links li{
+    border-bottom:none;
+    flex: 1 0 auto;
+    position: relative;
+  }
+
+  .nav-links li a{
+    padding: 16px;
+  }
+
+  .nav-links li a::before, .nav-links li a::after{
+    content: "";
+    position: absolute;
+    bottom:0;
+    right: 0;
+    width:0%;
+    height: 2.5px;
+    background: white;
+    transition: .3s width ease-in-out;
+  }
+
+  .nav-links li a::before{
+    left:0;
+  }
+
+  .nav-links li a:hover::after,nav ul li a:hover::before{
+    width: 50%;
+  }
+}
+
+/*to edit these*/
+.image-text-container {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.text-container {
+  flex: 1;
+  margin-left: 30px;
+  flex-grow: 1;
+}
+
+.default-image {
+  max-width: 500px;
+  flex: 1;
+}
+
+
+/*styles for general links in the website*/
+.general-links:link {
+  color: blue;
+  text-decoration: none;
+}
+
+.general-links:visited {
+  color: purple;
+}
+
+.general-links:hover {
+  color: #45A29E;
+  text-decoration: underline;
+}
+
+.general-links:active {
+  color: #457EA2;
+}
+
+
+/* Styling for home page */
+.effect {
+	animation-name: effect;
+	animation-duration: 2s;
+}
+
+.slideshow {
+  margin: 10px auto 20px auto;
+  display: block;
+  max-width: 700px;
+  align-content: center;
+}
+
+.slide {
+	width: 100%;
+}
+
+@keyframes effect {
+	from {
+		opacity: 0.2;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.slidein-effect {
+  animation-name: slidein;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+}
+
+.slidein-effect-one {
+  animation-name: slidein-one;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes slidein {
+  0% {
+    transform: translateX(-100vw);
+  }
+}
+@keyframes slidein-one {
+  0% {
+    transform: translateX(100vw);
+  }
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.cancel-submit-btns {
+  display:flex;
+  justify-content: flex-end;
+  margin-left: auto;
+  max-width: 250px;
+  margin-top: 40px;
+}
+
+.cancel-btn {
+  flex: 1;
+  background-color: #d4d4d4;
+  padding: 10px 0;
+  border: none;
+  cursor: pointer;
+
+}
+/*#40e0d0*/
+.login-btn {
+  flex: 1;
+  background-color: #40e0d0;
+  padding: 10px 0;
+  border: none;
+  cursor: pointer;
+}

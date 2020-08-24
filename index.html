@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1"> <!-- allows page to be responsive-->
+    <title>Home</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='main.css') }}">
+    <link rel="shortcut icon" href="static/images/icon.ico" type="image/x-icon"/>
+    <script src="https://kit.fontawesome.com/ddf9b074ad.js"></script>
+  </head>
+
+
+  <body>
+    <nav class="navbar">
+      <img src='static/images/logo.jpg' alt="Main logo" class="icon">
+      <ul class="nav-links">
+        <li><a href='home'>Home</a></li>
+        <li><a href='about.html'>About</a></li>
+        <li><a href='contact'>Contact</a></li>
+        <li><a href='login.html'>Login</a></li>
+      </ul>
+    </nav>
+
+    <h1>We Speak</h1>
+    <div class="slideshow">
+      <img class= "effect slide" src="static/images/image-1.png">
+      <img class= "effect slide" src="static/images/image-2.png">
+    </div>
+
+    <h2>What we do</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Dapibus ultrices in
+      iaculis nunc sed augue lacus. Quam nulla porttitor massa id neque aliquam.
+    </p>
+    <hr>
+    <div class="image-text-container slidein-effect">
+        <i class="default-image fas fa-phone-square-alt fa-5x"></i>
+        <div class='text-container'>
+          <h3>About</h3>
+          <p>Find out more about wespeak and what we do</p>
+        </div>
+    </div>
+
+    <div class="image-text-container slidein-effect-one">
+        <i class="default-image fas fa-info-circle fa-5x"></i>
+        <div class='text-container'>
+          <h3>Contact</h3>
+          <p>Get in touch with us for further enquires</p>
+        </div>
+    </div>
+    <script type="text/javascript" src="{{url_for('static', filename='slideshow.js')}}"></script>
+
+  </body>
